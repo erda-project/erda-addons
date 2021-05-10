@@ -1,0 +1,35 @@
+name: monitor
+displayName: 应用监控
+version: "3.6"
+type: addon
+category: monitoring&logging
+public: true
+# addon 主分类
+subCategory: microservice
+supportedVersions:
+  - ">= 3.5"
+desc: "微服务监控可以洞察完整事务流程的性能表现，从前端APP或浏览器到后端服务器、容器和代码各个级别进行应用性能分析，对系统的可用性和性能进行可视化管理，支持实时告警和全栈根因定位，提升运维开发效率。"
+configVars:
+  - TERMINUS_KEY
+  - TERMINUS_AGENT_ENABLE
+  - TERMINUS_TA_ENABLE
+  - TERMINUS_TA_URL
+  - TERMINUS_TA_COLLECTOR_URL
+logoUrl: //terminus-paas.oss-cn-hangzhou.aliyuncs.com/paas-doc/2019/10/15/9660d077-1404-4c18-974c-a18abc57569e.png
+imageUrls:
+  - //terminus-paas.oss-cn-hangzhou.aliyuncs.com/paas-doc/2019/08/23/a9fff9c9-fd27-4100-8e94-f8e43947bb6e.png
+  - //terminus-paas.oss-cn-hangzhou.aliyuncs.com/paas-doc/2019/08/23/f1ab6514-e8a5-460d-ae78-a1e4b97bea76.png
+  - //terminus-paas.oss-cn-hangzhou.aliyuncs.com/paas-doc/2019/08/23/2d8e30b5-7d61-4861-8181-f5182eec3f58.png
+
+# addon 服务地址 (仅针对服务部署类型,默认该服务为addon详情介绍页)
+domain: tmc.marathon.l4lb.thisdcos.directory:8050
+
+# addon共享级别，PROJECT（项目级别）
+shareScope:
+  - PROJECT
+
+# addon策略信息
+strategy:
+  # 让orchestrator不去解析addons
+  parsingAddons: false
+  
