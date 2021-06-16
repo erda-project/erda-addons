@@ -6,9 +6,12 @@ category: monitoring&logging
 public: true
 # addon 主分类
 subCategory: microservice
-supportedVersions:
-  - ">= 3.5"
 desc: "微服务监控可以洞察完整事务流程的性能表现，从前端APP或浏览器到后端服务器、容器和代码各个级别进行应用性能分析，对系统的可用性和性能进行可视化管理，支持实时告警和全栈根因定位，提升运维开发效率。"
+supportedVersions: # Deprecated. Please use supportedErdaVersions instead.
+  - ">= 3.5"
+supportedErdaVersions:
+  - ">= 1.0"
+
 configVars:
   - TERMINUS_KEY
   - TERMINUS_AGENT_ENABLE
