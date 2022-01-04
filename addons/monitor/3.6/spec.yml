@@ -12,6 +12,14 @@ supportedVersions: # Deprecated. Please use supportedErdaVersions instead.
 supportedErdaVersions:
   - ">= 1.0"
 
+locale:
+  zh-CN:
+    displayName: "应用监控"
+    desc: "微服务监控可以洞察完整事务流程的性能表现，从前端APP或浏览器到后端服务器、容器和代码各个级别进行应用性能分析，对系统的可用性和性能进行可视化管理，支持实时告警和全栈根因定位，提升运维开发效率。"
+  en-US:
+    displayName: "Application Monitoring"
+    desc: "Micro-service monitoring can provide insight into the performance of the complete transaction process, from the front-end APP or browser to the back-end server, container, and code at all levels to perform application performance analysis, visually manage the availability and performance of the system, and support real-time alarms and The full-stack root cause positioning improves the efficiency of operation, maintenance and development."
+
 configVars:
   - TERMINUS_KEY
   - TERMINUS_AGENT_ENABLE
@@ -35,4 +43,4 @@ shareScope:
 strategy:
   # 让orchestrator不去解析addons
   parsingAddons: false
-  
+
