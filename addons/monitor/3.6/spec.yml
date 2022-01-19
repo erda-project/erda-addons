@@ -1,12 +1,12 @@
 name: monitor
-displayName: 应用监控
+displayName: ${{ i18n.displayName }}
 version: "3.6"
 type: addon
 category: monitoring&logging
 public: true
 # addon 主分类
 subCategory: microservice
-desc: "微服务监控可以洞察完整事务流程的性能表现，从前端APP或浏览器到后端服务器、容器和代码各个级别进行应用性能分析，对系统的可用性和性能进行可视化管理，支持实时告警和全栈根因定位，提升运维开发效率。"
+desc: ${{ i18n.desc }}
 supportedVersions: # Deprecated. Please use supportedErdaVersions instead.
   - ">= 3.5"
 supportedErdaVersions:
