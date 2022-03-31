@@ -1,0 +1,84 @@
+# addon名称，平台内唯一标识
+name: custom
+
+# 市场类型
+type: addon
+
+# addon显示名称
+displayName: Custom
+
+# addon 版本
+version: "1.0.0"
+
+# addon 相关描述
+desc: ${{ i18n.desc }}
+
+# addon 分类
+category: custom
+
+labels:
+  deployable: false
+
+public: true
+
+supportedVersions: # Deprecated. Please use supportedErdaVersions instead.
+  - ">= 3.5"
+supportedErdaVersions:
+  - ">= 1.0"
+
+# addon 主分类
+subCategory: middleware
+
+logoUrl: //terminus-paas.oss-cn-hangzhou.aliyuncs.com/paas-doc/2018/06/26/56d86431-0d22-4eb2-8111-30efcfc65a26.jpeg # addon logo图片地址
+
+imageUrls:
+  - //terminus-paas.oss-cn-hangzhou.aliyuncs.com/paas-doc/2019/06/29/90180e6c-c79a-4bab-b8a4-73521febbb8b.png
+  - //terminus-paas.oss-cn-hangzhou.aliyuncs.com/paas-doc/2019/06/29/fba8119a-4cc8-4500-bb2d-2ac8dc4eeca7.png # addon 详情页展示图片地址
+
+# addon 支持规格 (仅针对服务部署类型)，根据能力自身的标准来制定，规格名称可以自行指定，比如basic(基础版)、professional(专业版)、ultimate(旗舰版)
+plan:
+  basic:
+    offerings: # 指标参数，描述服务一些具体的功能点、特性等，可按照能力自身的服务特点定义对应的指标特点
+      - ${{ i18n.plan.basic.offerings-0 }}
+      - ${{ i18n.plan.basic.offerings-1 }}
+
+# addon 服务地址 (仅针对服务部署类型,默认该服务为addon详情介绍页)
+domain: http://middleware.terminus.io
+
+# addon共享级别，PROJECT（项目级别）、CLUSTER（集群级别）
+shareScope:
+  - PROJECT
+  - ORG
+
+# addon 配置要求，目前支持以下三种属性，某项配置不允许，不传即可
+requires:
+  # 一个app可以被安装多个addon
+  - many_per_app
+  # 可以被共享给其他app
+  - attachable
+  # 支持变配
+  - plan_change
+
+# 返回内容配置约定，根据不同服务属性来返回对应的内容，
+
+# 若是提供host和port环境变量，则返回对应服务host、port信息
+# 配置名称能力自己指定
+# configVars:
+#   - REDIS_HOST #
+#   - REDIS_PORT #
+#   - REDIS_PASSWORD
+
+# addon策略信息
+strategy:
+  supportClusterType: 7 # 支持发布的集群(如：k8s,dcos,edas)
+
+locale:
+  zh-CN:
+    desc: 提供第三方应用环境变量的配置。
+    plan.basic.offerings-0: 环境变量配置
+    plan.basic.offerings-1: 项目共享
+
+  en-US:
+    desc: Provide environment variables for third-party applications.
+    plan.basic.offerings-0: Environment variables
+    plan.basic.offerings-1: Project-level sharing
