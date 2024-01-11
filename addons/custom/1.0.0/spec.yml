@@ -21,6 +21,8 @@ labels:
 
 public: true
 
+isDefault: true
+
 supportedVersions: # Deprecated. Please use supportedErdaVersions instead.
   - ">= 3.5"
 supportedErdaVersions:
